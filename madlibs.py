@@ -31,8 +31,35 @@ def user_input(prompt):
 def get_noun():
     input = str(user_input("Noun: "))
     if (input.upper()=="HELP"):
-        print("A noun is a person, place, or thing, such as 'hat', 'mouse', or 'table'.\n")
+        print("A noun is a person, place, or thing, such as 'hat', 'mouse', or 'table'.")
         return get_noun()
+    else:
+        return input.lower()
+
+
+def get_verb():
+    input = str(user_input("Verb: "))
+    if (input.upper()=="HELP"):
+        print("A verb is an action word, like 'run' or 'eat'.")
+        return get_verb()
+    else:
+        return input.lower()
+
+
+def get_adjective():
+    input = str(user_input("Adjective: "))
+    if (input.upper()=="HELP"):
+        print("An adjective descriptor, such as 'red', 'quick', or 'bad'.\n")
+        return get_adjective()
+    else:
+        return input.lower()
+
+
+def get_adverb():
+    input = str(user_input("Adverb: "))
+    if (input.upper()=="HELP"):
+        print("An adverb is a descriptor for a verb, such as 'quickly', 'easily', or 'deftly'.\n")
+        return get_adverb()
     else:
         return input.lower()
 
@@ -55,7 +82,7 @@ def welcome_text():
 
 
 def day_at_the_beach():
-    print (get_noun())
+    print ("It was an average, {} day and I decided to go to the beach with {}. As we walked up to the shore, we saw a sign for {}'s Discount {}. We ran up {} to get something to eat, but were shocked to find that they only sold {}. We were already there, so we bought {}. They only cost ${} each. Carrying our purchases, we made our way down to the water {}. We put on our swimwear: {} and {} with {} to accessorize. Finally, we tried to get in the ocean. Unfortunately, it was too {} for our liking, so we went home.".format(get_adjective(),get_noun(),get_noun(),get_noun(), get_adverb(), get_noun(), get_noun(), get_noun(), get_adverb(), get_noun(), get_noun(), get_noun(), get_adjective()))
 
 welcome_text()
 if select_story()==1:
