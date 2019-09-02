@@ -99,6 +99,24 @@ def get_adverb():
         return get_adverb()
     else:
         return yellow(input.lower())
+
+
+def get_clothing():
+    input = str(user_input("Clothing item: "))
+    if (input.upper()=="HELP"):
+        print("A type of clothing, like 'pants', 'ha†', or 'shirt'.\n")
+        return get_clothing()
+    else:
+        return purple(input.lower())
+
+
+def get_accessory():
+    input = str(user_input("Clothing accessory: "))
+    if (input.upper()=="HELP"):
+        print("A nonvital, decorative item of clothing, such as 'bows', 'earrigs', or 'necklace'.\n")
+        return get_accessory()
+    else:
+        return purple(input.lower())
 #end parts of speech
 
 
@@ -154,7 +172,7 @@ def welcome_text():
 
 
 def day_at_the_beach():
-    print ("It was an average, {} day and I decided to go to the beach with {}. As we walked up to the shore, we saw a sign for {}'s Discount {}. We ran up {} to get something to eat, but were shocked to find that they only sold {}. We were already there, so we bought {}. They only cost ${} each. Carrying our purchases, we made our way down to the water {}. We put on our swimwear: {} and {} with {} to accessorize. Finally, we tried to get in the ocean. Unfortunately, it was too {} for our liking, so we went home.".format(get_adjective(),get_name(),get_name(),get_plural_noun(), get_adverb(), get_plural_noun(), get_int(), get_float(), get_adverb(), get_noun(), get_noun(), get_noun(), get_adjective()))
+    print ("It was an average, {} day and I decided to go to the beach with {}. As we walked up to the shore, we saw a sign for {}'s Discount {}. We ran up {} to get something to eat, but were shocked to find that they only sold {}. We were already there, so we bought {}. They only cost ${} each. Carrying our purchases, we made our way down to the water {}. We put on our swimwear: {} and {} with {} to accessorize. Finally, we tried to get in the ocean. Unfortunately, it was too {} for our liking, so we went home.".format(get_adjective(),get_name(),get_name(),get_plural_noun(), get_adverb(), get_plural_noun(), get_int(), get_float(), get_adverb(), get_clothing(), get_clothing(), get_accessory(), get_adjective()))
 
 welcome_text()
 if select_story()==1:
